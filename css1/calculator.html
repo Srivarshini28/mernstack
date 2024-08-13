@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+</head>
+<body>
+    NUMBER 1: <input type="number" id="num1"/>
+    NUMBER 2: <input type="number" id="num2"/>
+    <button onclick="calc()">RESULT</button>
+    
+</body>
+<script>
+    function calc(){
+        n1 = parseInt(document.getElementById("num1").value);
+        n2 = parseInt(document.getElementById("num2").value);
+        console.log("Addition: ",n1+n2);
+        console.log("Subtraction: ",n1-n2);
+        console.log("Multiplication: ",n1*n2);
+        console.log("Division: ",n1/n2);
+    }
+    
+</script>
+</html>
