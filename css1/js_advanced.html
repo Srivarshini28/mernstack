@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function print(){
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id = "tid"/>
+    <button id = "bid">click</button></br></br>
+    <select id="Course">
+        <option value="select">Select options</option>
+        <option value="MCA">MCA</option>
+        <option value="BCA">BCA</option>
+        <option value="M.COM">M.COM</option>
+        <option value="BSC.CS">BSC.CS</option>
+    </select>
+</body>
+<script>
+    document.getElementById("bid").addEventListener('click',()=>{
+        let val = document.getElementById("tid").value;
+        console.log(val);
+    })
+    document.getElementById("Course").addEventListener('change',(e)=>{
+                console.log(e.target.value);
+    })
+</script>
+</html>

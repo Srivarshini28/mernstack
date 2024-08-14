@@ -16,9 +16,17 @@
                 console.log("Not available");
             }
         }
+
+        let name1 = ['aaa', 'bbb', 'ccc', 7, 89, 78, "kiki"];
+        console.log(name1);
+        let str = name1.filter((i) => {
+            return typeof i === 'string' && i.startsWith("k");
+        });
+        console.log(str);
+
     </script>
 </head>
 <body>
-    
-</body>
+
+</body>    
 </html>
