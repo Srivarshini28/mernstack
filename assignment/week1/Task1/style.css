@@ -1,0 +1,99 @@
+.h1 home_welcome{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: aquamarine;
+}
+body {
+    background-color: rgb(196, 154, 235);
+    font-family: Arial, sans-serif;
+}
+
+.details{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.1);
+    width: 300px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
+
+.login_form{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.1);
+    width: 300px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
+
+h1{
+    color: rgb(56, 9, 56);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(51, 6, 51);
+}
+
+.menu li {
+    margin: 0 15px;
+    padding: 14px 80px;
+    flex-direction: row;
+    list-style: none;
+    font-weight: bold;
+}
+
+.menu li:hover {
+    background-color: rgb(196, 154, 235);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.photos_row1, .photos_row2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.photos_row1 img, .photos_row2 img{
+    box-shadow: 0 10px 20px rgb(51, 6, 51);
+    height: 200px;
+    width: 200px;
+}
+
+.photos_row1 img:hover, .photos_row2 img:hover{
+    transform: scale(1.1);
+    padding: 5px white;
+    opacity: 0.6;
+    box-shadow: 0 0 10px rgb(51, 6, 51)
+}
+
+.redBorder {
+    border: 2px solid red;
+}
+.greenBorder{
+    border: 2px solid green;
+}
+
+
+
+
+

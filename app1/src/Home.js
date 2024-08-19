@@ -1,7 +1,10 @@
 function Home(){
     return(
         <>
-        <h1>This is home page!!!</h1>
+        <cenetr>
+            <h1>This is home page!!!</h1>
+        </cenetr>
+        
         </>
     )
 };
