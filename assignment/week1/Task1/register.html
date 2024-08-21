@@ -3,30 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Register</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #r-l{
+            color: rgb(56, 9, 56);
+            text-decoration: underline;
+        }
+        input{
+            font-size: 17px;
+            border: 1px solid purple;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 0 5px 0 purple;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; /* Add some padding for spacing */
+            background-color: rgb(51, 6, 51); /* Matching nav background color */
+        }
+
+        .heading{
+            color: white;
+        }
+
+        img {
+            border-radius: 50%; /* Rounded image */
+            width: 60px; /* Adjust the width */
+            height: 60px; /* Adjust the height */
+        }
+
+        p {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px; /* Adjust the font size */
+            margin: 0 20px; /* Space between image and nav */
+        }
+
+        nav {
+            flex-grow: 1;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: flex-end; /* Align menu items to the right */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+            padding: 14px 20px;
+            font-weight: bold;
+        }
+
+        .menu li:hover {
+            background-color: rgb(223, 150, 223);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        footer {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
     
 </head>
-<body class="login">
-    <ul class="menu">
-        <li><a href="home.html">HOME</a></li>
-        <li><a href="login.html">LOGIN</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="gallery.html">GALLERY</a></li>
-    </ul>
+<body class="register">
+    <div class="header">
+        <img src="images.jpg">
+        <p id="heading">PURPLE BLOOMS</p>
+        <nav>
+            <ul class="menu">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="register.html">REGISTER</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </div>
     <center>
-        <h1>REGISTER</h1>
         <form class="reg_form" onsubmit="input(event)">
             <center>
-                <b>Name</b><br> <input name="name" id="name" type="text"><br><br>
-                <b>Phone number</b><br><input name="num" id="num" type="number"><br><br>
-                <b>Password</b><br><input name="pass1" id="pass1" type="password"><br><br>
-                <b>Conform Password</b><br><input name="pass2" id="pass2" type="password"><br><br>
-                <button type="REGISTER" id="login_submit">SUBMIT</button>
+                <h1>REGISTER</h1>
+                <input name="name" id="name" type="text" placeholder="Enter your name"><br><br>
+                <input name="num" id="num" type="number" placeholder="Enter your phone number"><br><br>
+                <input name="pass1" id="pass1" type="password" placeholder="Enter your password"><br><br>
+                <input name="pass2" id="pass2" type="password" placeholder="Confirm password"><br><br>
+                <button type="REGISTER" id="login_submit">REGISTER</button><br><br>
+                Already registered? <a href="login.html" id="r-l">Login&#8599;</a>
             </center>
         </form>
-        <h3 id="success_message"></h3>
+        
     </center>
+    <center><h3 id="success_message"></h3></center>
+
+    <footer>
+        <label>Done by Srivarshini R</label>
+    </footer>
+    
     <script>
         function chgColor(inputElement, condition) {
             if (condition) {
@@ -61,13 +151,17 @@
                 document.getElementById('success_message').innerText = "Password doesn't match";
                 chgColor(document.getElementById('pass2'), false);
             } else {
-                document.getElementById('success_message').innerText = "Successfully logged in!";
+                alert("Registered successfully!")
                 chgColor(document.getElementById('name'), true);
                 chgColor(document.getElementById('num'), true);
                 chgColor(document.getElementById('pass1'), true);
                 chgColor(document.getElementById('pass2'), true);
+                window.location.href = 'login.html';
+
             }
         }
+
+        
     </script>
 </body>
 </html>

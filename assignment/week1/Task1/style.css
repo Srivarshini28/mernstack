@@ -1,5 +1,5 @@
 .h1 home_welcome{
-    margin: 0;
+    margin: 100px;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -8,34 +8,39 @@
     color: aquamarine;
 }
 body {
-    background-color: rgb(196, 154, 235);
+    background-image: radial-gradient(rgb(231, 154, 231),purple);
     font-family: Arial, sans-serif;
 }
 
 .details{
-    padding: 20px;
+    margin-top: 10px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(8, 8, 8, 0.1);
     width: 300px;
     justify-content: center;
     display: flex;
-    align-items: center;
-    height: 50vh;
+    height: 60vh;
+    background-color: white;
+    border: 2px solid purple;
 }
 
-.login_form{
-    padding: 20px;
+.login_form , .reg_form{
+    margin-top: 10px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(8, 8, 8, 0.1);
     width: 300px;
     justify-content: center;
     display: flex;
     align-items: center;
-    height: 50vh;
+    height: 60vh;
+    background-color: white;
+    border: 2px solid purple;
 }
 
 h1{
-    color: rgb(56, 9, 56);
+    color: rgb(51, 6, 51);
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -54,16 +59,12 @@ h1{
 }
 
 .menu li:hover {
-    background-color: rgb(196, 154, 235);
+    background-color: rgb(223, 150, 223);
 }
 
 a{
     color: white;
     text-decoration: none;
-}
-
-a:hover{
-    text-decoration: underline;
 }
 
 .photos_row1, .photos_row2{
@@ -82,7 +83,7 @@ a:hover{
 .photos_row1 img:hover, .photos_row2 img:hover{
     transform: scale(1.1);
     padding: 5px white;
-    opacity: 0.6;
+    opacity: 0.8;
     box-shadow: 0 0 10px rgb(51, 6, 51)
 }
 
@@ -93,7 +94,16 @@ a:hover{
     border: 2px solid green;
 }
 
-
+button{
+    font-size: 20px;
+    background-color: rgb(56, 9, 56);
+    color: white;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 0 10px black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+}
 
 
 

@@ -5,17 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; 
+            background-color: rgb(51, 6, 51); 
+        }
+
+        img {
+            border-radius: 50%; 
+            width: 60px; 
+            height: 60px; 
+        }
+
+        #heading {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px; 
+            margin: 0 20px; 
+        }
+
+        nav {
+            flex-grow: 1;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: flex-end; /* Align menu items to the right */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+            padding: 14px 20px;
+            font-weight: bold;
+        }
+
+        .menu li:hover {
+            background-color: rgb(223, 150, 223);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            margin-top: 90px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(8, 8, 8, 0.1);
+            width: 80%;
+            max-width: 500px;
+            background-color: white;
+            border: 2px solid purple;
+            text-align: center;
+        }
+
+        footer {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        #content {
+            color: black;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
-    <ul class="menu">
-        <li><a href="login.html">LOGIN</a></li>
-        <li><a href="register.html">REGISTER</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="gallery.html">GALLERY</a></li>
+    <div class="header">
+        <img src="images.jpg">
+        <p id="heading">PURPLE BLOOMS</p>
+        <nav>
+            <ul class="menu">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="register.html">REGISTER</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    </ul>
     <center>
-        <h1>WELCOME TO THIS WEBSITE</h1>
+        <form>
+            <h1>WELCOME TO PURPLE BLOOMS</h1>
+            <div id="content">
+                <p>Purple flowers are a beautiful and captivating addition to any garden or floral arrangement, and a website dedicated to them can offer a serene and visually appealing experience. The website could feature a gallery showcasing various types of purple flowers, from delicate lavenders to vibrant violets, providing inspiration for gardeners and flower enthusiasts alike.</p>
+            </div>
+        </form>
     </center>
+
+    <footer>
+        <label>Done by Srivarshini R</label>
+    </footer>
 </body>
 </html>

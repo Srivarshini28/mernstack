@@ -5,29 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        input{
+            font-size: 17px;
+            border: 1px solid purple;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 0 5px 0 purple;
+        }
+
+        textarea{
+            font-size: 18px;
+            border: 1px solid purple;
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 0 5px 0 purple;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; 
+            background-color: rgb(51, 6, 51); 
+        }
+
+        .heading{
+            color: white;
+        }
+
+        img {
+            border-radius: 50%; 
+            width: 60px; 
+            height: 60px; 
+        }
+
+        p {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px; 
+            margin: 0 20px; 
+        }
+
+        nav {
+            flex-grow: 1;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+            padding: 14px 20px;
+            font-weight: bold;
+        }
+
+        .menu li:hover {
+            background-color: rgb(223, 150, 223);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        footer {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body class="contact">
-    <ul class="menu">
-        <li><a href="home.html">HOME</a></li>
-        <li><a href="login.html">LOGIN</a></li>
-        <li><a href="register.html">REGISTER</a></li>
-        <li><a href="gallery.html">GALLERY</a></li>
-    </ul>
+    <div class="header">
+        <img src="images.jpg">
+        <p id="heading">PURPLE BLOOMS</p>
+        <nav>
+            <ul class="menu">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="register.html">REGISTER</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </div>
     <center>
-        <h1>CONTACT US</h1>
+        
         <form class="details" onsubmit="submit_form(event)">
             <center>
-                <b>Name</b><br> <input name="name" id="name" type="text" ><br><br>
-                <b>Phone number</b><br><input name="num" id="num" type="tel" ><br><br>
-                <b>Email</b><br><input name="email" id="email" type="email" ><br><br>
-                <b>Query</b><br> <textarea id="ta" name="query"></textarea><br><br>
+                <h1>CONTACT US</h1>
+                <input name="name" id="name" type="text" placeholder="Enter your name"><br><br>
+                <input name="num" id="num" type="tel" placeholder="Enter your phone number"><br><br>
+                <input name="email" id="email" type="email" placeholder="Enter your email"><br><br>
+                <textarea id="ta" name="query" placeholder="Enter your query"></textarea><br><br>
                 <button type="submit">SUBMIT</button>
             </center>
         </form>
         <h3 id="login_label"></h3>
     </center>
+
+    <footer>
+        <label>Done by Srivarshini R</label>
+    </footer>
 </body>
 <script>
+    function chgColor(inputElement, condition) {
+        if (condition) {
+            inputElement.classList.add('greenBorder');
+            inputElement.classList.remove('redBorder');
+        } 
+        else {
+            inputElement.classList.add('redBorder');
+            inputElement.classList.remove('greenBorder');
+        }
+    }
+
     function submit_form(event) {
         event.preventDefault(); // Prevent default form submission
         const name = document.getElementById('name').value;
@@ -37,10 +141,21 @@
 
         if (name === "" || ph === "" || email === "" || query === "") {
             document.getElementById('login_label').innerHTML = 'Please enter all fields';
+            chgColor(document.getElementById('name'), name !== "");
+            chgColor(document.getElementById('num'), ph !== "");
+            chgColor(document.getElementById('email'), email !== "");
+            chgColor(document.getElementById('ta'), query !== "");
+
         } else if (ph.length !== 10) {
             document.getElementById('login_label').innerHTML = 'Please enter a valid phone number';
+            chgColor(document.getElementById('num'), false);
         } else {
             document.getElementById('login_label').innerHTML = "Form submitted!";
+
+            document.getElementById('name').value = ''; 
+            document.getElementById('num').value = ''; 
+            document.getElementById('email').value = ''; 
+            document.getElementById('ta').value = ''; 
         }
     }
 </script>

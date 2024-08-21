@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obj</title>
+    <script>
+        let personList = [{
+            "name":"Srivarshini",
+            "mobile": 7010054866,
+            "address": "Chennai"},
+            {"name":"Varshini",
+             "address": "Chennai",
+            "email":"sri@gmail.com"},{
+             "name":"Sneha",
+             "address": "Bangalore",
+            "email":"sneha@gmail.com"
+                
+            }
+        ]
+        i = 0
+        for (i in personList){
+            console.log(personList[i]);
+            i = i+1
+        }
+        
+        console.log(personList[2]['name'],['address']); // address of 3 rd one
+        console.log(personList[1]['name'],['address']); // address of 2 rd one
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

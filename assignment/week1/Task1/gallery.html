@@ -5,27 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body class="contact">
-    <ul class="menu">
-        <li><a href="home.html">HOME</a></li>
-        <li><a href="login.html">LOGIN</a></li>
-        <li><a href="register.html">REGISTER</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+    <style>
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; 
+            background-color: rgb(51, 6, 51); 
+        }
 
-    </ul>
+        .heading{
+            color: white;
+        }
+
+        img {
+            border-radius: 50%; 
+            width: 60px; 
+            height: 60px; 
+        }
+
+        p {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px; 
+            margin: 0 20px; 
+        }
+
+        nav {
+            flex-grow: 1;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: flex-end; 
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+            padding: 14px 20px;
+            font-weight: bold;
+        }
+
+        .menu li:hover {
+            background-color: rgb(223, 150, 223);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(216, 113, 216);
+        }
+        footer {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="gallery">
+    <div class="header">
+        <img src="images.jpg">
+        <p id="heading">PURPLE BLOOMS</p>
+        <nav>
+            <ul class="menu">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="register.html">REGISTER</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+            </ul>
+        </nav>
+    </div>
     <center>
         <h1>GALLERY</h1>
         <div class="photos_row1">
-            <div class="img1"><img src="download5.jpg"></div><br>
-            <div class="img2"><img src="download1.jpg"></div><br>
-            <div class="img2"><img src="download2.jpg"></div><br>
-        </div>
+            <div class="img1"><img src="f1.jpg"></div><br>
+            <div class="img2"><img src="f2.jpg"></div><br>
+            <div class="img2"><img src="f3.jpg"></div><br>
+        </div><br>
         <div class="photos_row2">
-            <div class="img4"><img src="download3.jpg"></div><br>
-            <div class="img5"><img src="download.jpg"></div><br>
-            <div class="img6"><img src="download4.jpg"></div><br>
+            <div class="img4"><img src="f4.jpg"></div><br>
+            <div class="img5"><img src="f5.jpg"></div><br>
+            <div class="img6"><img src="f6.jpg"></div><br>
         </div>
     </center>
+
+    <footer>
+        <label>Done by Srivarshini R</label>
+    </footer>
 </body>
 </html>

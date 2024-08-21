@@ -3,45 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>LOGIN</title>
+    <style>
+        body{
+            margin-top: 180px;
+            background-color: rgb(240, 193, 193);
+        }
+        label{
+            color: red;
+            font-size: 100px;
+        }
+        input{
+            font-size: 20px;
+            padding: 20px;
+            border-radius: 30px;
+            border: 2px groove red;
+            box-shadow: 0 12px 0 rgb(221, 115, 115);
+        }
+        button{
+            margin-top: 10px;
+            color: white;
+            background-color: red;
+            font-size: 20px;
+            border-radius: 50px;
+            padding: 20px;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Login</h1>
-    <form id="loginForm">
-        <label for="email">Email:</label>
-        <input type="email" id="email" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" required>
-        <br>
-        <button type="submit">Login</button>
-    </form>
+    <center>
+        <label>LOGIN</label><br><br>
+        <input type="text" placeholder="Enter your email" id="email"/><br><br>
+        <input type="text" placeholder="Enter your password" id="password"/><br><br>
+        <button onclick="getapi()">LOGIN</button>
+    </center>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            fetch('https://reqres.in/api/login', {
-                method: 'POST',
+        async function getapi(){
+            // Retrieve input values
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            
+            // Create data object with user inputs
+            let data = {
+                "email": email,
+                "password": password
+            };
+            
+            // Make the POST request
+            let res = await fetch("https://reqres.in/api/login", {
+                method: "POST",
+                body: JSON.stringify(data),
                 headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    email: email,
-                    password: password
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Login Response:', data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
+                    "Content-Type": "application/json"
+                }
             });
-        });
+            
+            // Parse and log the response
+            let json = await res.json();
+            if (res.ok && json.token){
+                console.log("Logged in successfully!")
+            }else{
+                console.log("Login failed!")
+            }
+            console.log(json);
+            console.log(res);
+        }
     </script>
 </body>
 </html>
