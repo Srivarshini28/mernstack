@@ -1,29 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Home from './Home';
-import About from './About';
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-
-const config = createBrowserRouter([
-  {path:"/home",element:<Home/>},
-  {path:"/about",element:<About/>}
-]);
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Product from './Product';
+import UserList from './UserList';
 
 function App() {
-  const getUser=async ()=>{
-    let res = await fetch("https://reqres.in/api/users");
-    let serverRes = await res.json();
-    console.log(serverRes['data'])
-  }
   return (
-    <div className="App">
-
-      {/* <RouterProvider config={config}/> */}
-      <Home/>
-      <About/>
-      <button onClick={getUser}>click to get user</button>
-
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/product" element={<Product />} />
+        <Route path="/" element={<UserList />} />
+      </Routes>
+    </Router>
   );
 }
 
