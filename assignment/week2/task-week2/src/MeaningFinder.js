@@ -29,8 +29,8 @@ const MeaningFinder = () => {
         value={name}
         onChange={handleChange}
         placeholder="Enter a name"
-      />
-      <button onClick={handleClick}>Get Meaning</button>
+      /><p></p>
+      <button onClick={handleClick}>RETRIEVE THE VALUES</button>
     </div>
     </center>
   );
