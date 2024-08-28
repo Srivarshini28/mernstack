@@ -1,4 +1,3 @@
-// src/MeaningFinder.js
 import React, { useState } from 'react';
 
 const MeaningFinder = () => {
@@ -23,7 +22,8 @@ const MeaningFinder = () => {
   };
 
   return (
-    <div>
+    <center>
+      <div>
       <input
         type="text"
         value={name}
@@ -32,6 +32,7 @@ const MeaningFinder = () => {
       />
       <button onClick={handleClick}>Get Meaning</button>
     </div>
+    </center>
   );
 };
 
