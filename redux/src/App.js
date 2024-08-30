@@ -5,6 +5,7 @@ import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 import Header from './Header';
+import Web from './Web';
 
 import {
   createBrowserRouter, RouterProvider,} from "react-router-dom";
@@ -12,10 +13,11 @@ import { myStore } from './redux/config';
 
 let routerPaths = createBrowserRouter([
   {"path":"/","element":<Home/>},
-  {"path":"/Home.js","element":<Home/>},
-  {"path":"/About.js","element":<About/>},
-  {"path":"/Contact.js","element":<Contact/>},
-  {"path":"/Header.js","element":<Header/>},
+  {"path":"/Home","element":<Home/>},
+  {"path":"/About","element":<About/>},
+  {"path":"/Contact","element":<Contact/>},
+  {"path":"/Header","element":<Header/>},
+  {"path":"/Web","element":<Web/>}
 ])
     
 function App() {
