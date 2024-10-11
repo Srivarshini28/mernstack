@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML Elements Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        article {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+        }
+
+        aside {
+            background-color: #f4f4f4;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        span {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header: Contains the website's title and navigation -->
+    <header>
+        <h1>Welcome to My Website</h1>
+        <!-- Navigation links -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#articles">Articles</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main content of the page -->
+    <main>
+        <!-- Section 1: Welcome message -->
+        <section id="home">
+            <h2>Introduction</h2>
+            <p>Welcome to my website where you can find various articles on web development. We will use semantic HTML to structure our content efficiently.</p>
+        </section>
+
+        <!-- Section 2: Articles -->
+        <section id="articles">
+            <h2>Latest Articles</h2>
+
+            <!-- Article 1: Self-contained content -->
+            <article>
+                <header>
+                    <h3>Understanding Semantic HTML</h3>
+                    <time datetime="2024-10-11">October 11, 2024</time>
+                </header>
+                <p>In this article, we will explore why <span>semantic HTML</span> is important and how it enhances the structure of web pages.</p>
+                <aside>
+                    <!-- Related note or additional info -->
+                    <p><strong>Note:</strong> This article is part of our web development series.</p>
+                </aside>
+                <footer>
+                    <p>Written by: John Doe</p>
+                </footer>
+            </article>
+
+            <!-- Article 2: Another self-contained piece of content -->
+            <article>
+                <header>
+                    <h3>HTML5 Media Elements</h3>
+                    <time datetime="2024-10-10">October 10, 2024</time>
+                </header>
+                <p>HTML5 introduced new media elements like <mark>&lt;video&gt;</mark> and <mark>&lt;audio&gt;</mark>, making it easier to embed media files.</p>
+                <footer>
+                    <p>Written by: Jane Smith</p>
+                </footer>
+            </article>
+        </section>
+
+        <!-- Figure with an image and caption -->
+        <figure>
+            <img src="https://via.placeholder.com/300" alt="Placeholder image" width="300" height="200">
+            <figcaption>An example of a placeholder image with a caption.</figcaption>
+        </figure>
+
+        <!-- Section 3: Contact form with details element -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out!</p>
+
+            <!-- Using the <details> element to hide extra information -->
+            <details>
+                <summary>Contact Information</summary>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123-456-7890</p>
+            </details>
+        </section>
+    </main>
+
+    <!-- Footer of the page -->
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

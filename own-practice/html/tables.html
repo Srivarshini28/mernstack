@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Example</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Remove spacing between cells */
+        }
+        th, td {
+            border: 1px solid #ddd; /* Light grey border */
+            padding: 8px; /* Padding inside cells */
+            text-align: left; /* Align text to the left */
+        }
+        th {
+            background-color: #f2f2f2; /* Light grey background for header */
+        }
+        caption {
+            font-size: 1.5em; /* Larger font for the caption */
+            margin: 10px 0; /* Margin around caption */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Grades Table</h1>
+
+    <table>
+        <caption>Students Information</caption> <!-- Table caption -->
+        <colgroup>
+            <col style="width: 30%;"> <!-- Set width for the first column -->
+            <col style="width: 30%;"> <!-- Set width for the second column -->
+            <col style="width: 40%;"> <!-- Set width for the third column -->
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Name</th> <!-- Table header cell -->
+                <th>Age</th>  <!-- Table header cell -->
+                <th>Grade</th> <!-- Table header cell -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td> <!-- Table data cell -->
+                <td>20</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>22</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>19</td>
+                <td>A-</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Average Grade</td> <!-- Footer cell spanning two columns -->
+                <td>A-</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
