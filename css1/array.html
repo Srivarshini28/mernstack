@@ -9,7 +9,7 @@
         let name = ['a','b','c','d','e',12,11];
         console.log(name[2].toLowerCase());
         for (let index in name){
-            if (name[index].startsWith('w')){
+            if (typeof name[index] == 'string' && name[index].startsWith('w')){
                 console.log(index,name[index]);
             }
             else{
@@ -17,11 +17,15 @@
             }
         }
 
+        for ( let n of name){
+            if (String(n).startsWith('a')){
+                console.log(n);
+            }
+        }
+
         let name1 = ['aaa', 'bbb', 'ccc', 7, 89, 78, "kiki"];
         console.log(name1);
-        let str = name1.filter((i) => {
-            return typeof i === 'string' && i.startsWith("k");
-        });
+        let str = name1.filter((i) => typeof i === 'string' && i.startsWith("k"));
         console.log(str);
     </script>
 </head>

@@ -13,7 +13,7 @@
 <script>
     async function getapi (){
     //public  url is given
-    let res=await fetch ("https://reqres.in/api/users",{"method": "POST"});
+    let res=await fetch ("https://reqres.in/api/users");
     let json= await res.json();
     console.log(json);
     console.log(res);

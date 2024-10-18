@@ -8,18 +8,36 @@
 <body>
     NUMBER 1: <input type="number" id="num1"/>
     NUMBER 2: <input type="number" id="num2"/>
-    <button onclick="calc()">RESULT</button>
+    <button onclick="calculate('add')">add</button></br></br>
+    <button onclick="calculate('sub')">sub</button></br></br>
+    <button onclick="calculate('mul')">mul</button></br></br>
+    <button onclick="calculate('div')">div</button></br></br>
     
 </body>
 <script>
-    function calc(){
+    function calculate(val){
         n1 = parseInt(document.getElementById("num1").value);
         n2 = parseInt(document.getElementById("num2").value);
-        console.log("Addition: ",n1+n2);
-        console.log("Subtraction: ",n1-n2);
-        console.log("Multiplication: ",n1*n2);
-        console.log("Division: ",n1/n2);
+        switch(val){
+            case 'add':
+                console.log("Addition: ",n1+n2);
+                break
+            case 'sub':
+                console.log("Subtraction: ",n1-n2);
+                break
+            case 'mul':
+                console.log("Multiplication: ",n1*n2);
+                break
+            case 'div':
+                console.log("Division: ",n1/n2);
+                break
+            default:
+                result = "Unknown operation"; 
+        }
+        
     }
+
+
     
 </script>
 </html>

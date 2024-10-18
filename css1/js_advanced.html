@@ -19,7 +19,9 @@
         <option value="BCA">BCA</option>
         <option value="M.COM">M.COM</option>
         <option value="BSC.CS">BSC.CS</option>
-    </select>
+    </select><br>
+    <p id="res"></p>
+    
 </body>
 <script>
     document.getElementById("bid").addEventListener('click',()=>{
@@ -27,7 +29,7 @@
         console.log(val);
     })
     document.getElementById("Course").addEventListener('change',(e)=>{
-                console.log(e.target.value);
+        document.querySelector('#res').innerText =`Course is ${e.target.value}`;
     })
 </script>
 </html>
