@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Elements Example</title>
+    <link rel="icon" href=
+    "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" 
+              type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        output {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Form Elements Example</h1>
+
+    <!-- Form starts -->
+    <form action="#" method="post">
+        
+        <!-- Fieldset with a legend -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <!-- Label for input fields -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Using datalist for input suggestions -->
+            <label for="country">Country:</label>
+            <input list="countries" id="country" name="country" placeholder="Choose your country">
+            <datalist id="countries">
+                <option value="USA">
+                <option value="Canada">
+                <option value="India">
+                <option value="Germany">
+                <option value="France">
+            </datalist>
+
+        </fieldset>
+
+        <!-- Select with options and optgroup -->
+        <label for="job">Select your job role:</label>
+        <select id="job" name="job">
+            <optgroup label="Tech">
+                <option value="frontend">Frontend Developer</option>
+                <option value="backend">Backend Developer</option>
+            </optgroup>
+            <optgroup label="Non-Tech">
+                <option value="marketing">Marketing Specialist</option>
+                <option value="hr">HR Manager</option>
+            </optgroup>
+        </select>
+
+        <!-- Textarea for a message -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Type your message here"></textarea>
+
+        <!-- Input fields with labels -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="100">
+
+        <!-- Range input with output -->
+        <label for="experience">Experience (years):</label>
+        <input type="range" id="experience" name="experience" min="0" max="30" oninput="experienceOutput.value = experience.value">
+        <output id="experienceOutput">15</output> years
+
+        <!-- Fieldset with radio buttons and checkboxes -->
+        <fieldset>
+            <legend>Preferences</legend>
+
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+
+            <label>Hobbies:</label><br>
+            <input type="checkbox" id="coding" name="hobbies" value="coding">
+            <label for="coding">Coding</label><br>
+            <input type="checkbox" id="reading" name="hobbies" value="reading">
+            <label for="reading">Reading</label><br>
+        </fieldset>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>

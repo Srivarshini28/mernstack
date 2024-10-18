@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+  <style>
+    .highlight {
+      color: red;
+      border: 10px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="mainHeading">Hello, World!</h1>
+  <p class="description">This is a paragraph of text.</p>
+  <button id="changeTextBtn">Change Text</button>
+  <button id="highlightBtn">Highlight Text</button>
+
+  <form id="myForm">
+    <label for="nameInput">Name: </label>
+    <input type="text" id="nameInput">
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="output"></div>
+
+  <script >
+    // Select elements
+let mainHeading = document.querySelector("#mainHeading");
+let description = document.querySelector(".description");
+let changeTextBtn = document.getElementById("changeTextBtn");
+let highlightBtn = document.getElementById("highlightBtn");
+let nameInput = document.getElementById("nameInput");
+let form = document.getElementById("myForm");
+let outputDiv = document.getElementById("output");
+
+// 1. Modify text content of the heading
+changeTextBtn.addEventListener("click", ()=>mainHeading.innerHTML = "welcome");
+
+// 2. Modify style of the paragraph when a button is clicked
+highlightBtn.addEventListener("click", function() {
+  description.classList.add("highlight");
+  //description.style.color = 'red';
+});
+
+// 3. Handle form submission
+form.addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent form submission from refreshing the page
+  let name = nameInput.value;
+  if (name) {
+    outputDiv.textContent = `Hello, ${name}! Welcome to the site.`;
+    outputDiv.style.color = "green";
+  } else {
+    outputDiv.textContent = "Please enter your name.";
+    outputDiv.style.color = "red";
+  }
+  console.log("Form submitted with name:", name);
+});
+
+  </script>
+</body>
+</html>

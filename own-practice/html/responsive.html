@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Example</title>
+    <style>
+        /* Base styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Container */
+        .container {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Responsive Flexbox layout */
+            justify-content: space-around;
+        }
+
+        .box {
+            background-color: lightgray;
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 300px; /* Each box takes up at least 300px */
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        /* Responsive text using relative units */
+        h1 {
+            font-size: 5vw;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        /* Grid layout for responsive design */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1200px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+
+        @media (min-width: 1201px) {
+            body {
+                background-color: lightcoral;
+            }
+        }
+
+        /* Styling images for responsiveness */
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Viewport meta tag is in head for responsive design -->
+
+    <!-- Responsive Text Example -->
+    <h1>Responsive Design Example</h1>
+
+    <p>This is a demonstration of responsive web design techniques.</p>
+
+    <!-- Responsive Images Example -->
+    <h2>Responsive Image</h2>
+    <img src="https://via.placeholder.com/1200x500" alt="Responsive Image">
+
+    <!-- Responsive Flexbox Layout -->
+    <h2>Responsive Flexbox Layout</h2>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+    <!-- Responsive Grid Layout -->
+    <h2>Responsive Grid Layout</h2>
+    <div class="grid-container">
+        <div class="grid-item">Grid Item 1</div>
+        <div class="grid-item">Grid Item 2</div>
+        <div class="grid-item">Grid Item 3</div>
+        <div class="grid-item">Grid Item 4</div>
+    </div>
+
+    <!-- Form Example with responsive input fields -->
+    <h2>Form Example</h2>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>

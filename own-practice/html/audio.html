@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>HTML Audio</title>
+</head>
+
+<body>
+    <iframe src="lists.html" height="300px" width="400px"></iframe>
+    <input type="range" id="exp" name="exp" min="0" max="60" oninput="expop.value=exp.value"/>
+
+
+    <pre>
+        <code> 
+            a = 10
+            b = 11
+            print(a+b)
+        </code> 
+    </pre>
+
+</html>
+
+    <output id="expop">5</output>years
+    <div>
+        <p>Audio Controls Autoplay</p>
+
+        <!-- audio tag starts here -->
+        <audio controls autoplay>
+            <source src="testAudio.mp3" 
+                    type="audio/mpeg">
+        </audio>
+
+        <!-- audio tag ends here -->
+    </div>
+
+    <div>
+        <p>Audio Controls Autoplay Muted</p>
+
+        <!-- audio tag starts here -->
+        <audio controls autoplay muted>
+            <source src="testAudio.mp3" 
+                    type="audio/mpeg">
+        </audio>
+
+        <!-- audio tag ends here -->
+    </div>
+
+    <div>
+        <p>Audio Controls Autoplay Loop</p>
+
+        <!-- audio tag starts here -->
+        <audio controls autoplay loop>
+            <source src="testAudio.mp3"
+                    type="audio/mpeg">
+        </audio>
+
+        <!-- audio tag ends here -->
+    </div>
+</body>
+
+</html>
